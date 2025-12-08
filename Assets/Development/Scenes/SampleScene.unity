@@ -845,8 +845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a4e2a9aa868e4aad504891b717488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 6231671996964522414, guid: 73ccf86b041f90d4f82a2ed11ebaee29, type: 3}
-  itemPrefab: {fileID: 4995532915474726150, guid: effc40157d1d011469d01732ec2730ce, type: 3}
+  enemyRatio: 
+  monsterPrefabs: []
+  itemPrefabs: []
 --- !u!4 &334519568
 Transform:
   m_ObjectHideFlags: 0
@@ -1140,10 +1141,11 @@ MonoBehaviour:
   gamePauseUI: {fileID: 1454536532}
   gameOverUI: {fileID: 303546364}
   gameClearUI: {fileID: 55718623}
+  attack_speed: 5
+  attack_type: 0
   bullet_damage: 1
   bullet_count: 1
-  bullet_time: 1
-  bullet_penetration_count: 1
+  bullet_hit_count: 1
 --- !u!1 &489037201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,7 +3207,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -26107,10 +26109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fc8383c29599649b74504650f9ee68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 0
   speed: 5
-  bulletPrefab: {fileID: 5557056046360600743, guid: 5765d69117c07a94197151a9c2b874dd, type: 3}
+  bulletPrefabs: []
   LevelUp_Particle: {fileID: 6897245285591423886}
-  audio: {fileID: 963194230}
+  soundManager: {fileID: 0}
 --- !u!1 &8116087054709271694
 GameObject:
   m_ObjectHideFlags: 0
