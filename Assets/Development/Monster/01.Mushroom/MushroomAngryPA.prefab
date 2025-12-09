@@ -427,14 +427,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStateType: 0
   ForceStateChange: 0
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   baseMoveSpeed: 6
   moveSpeed: 0
-  attackDamage: 10
-  attackSpeed: 10
+  attackDamage: 2
+  attackSpeed: 5
   experiencePoints: 10
-  dropCoins: 0
+  dropCoins: 10
   dropGems: 0
   healthBar: {fileID: 5174782412965474680}
   hitAudio: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}

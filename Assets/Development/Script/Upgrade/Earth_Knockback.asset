@@ -18,5 +18,5 @@ MonoBehaviour:
   Description: (Earth) Knockback Power Upgrade
   Icon: {fileID: 0}
   MaxLevel: 5
-  IncreaseRatio: 1
+  IncreaseRatio: 0.5
   CostPerLevel: 0000000000000000000000000000000000000000

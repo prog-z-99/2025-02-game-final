@@ -118,12 +118,12 @@ MonoBehaviour:
   ForceStateChange: 0
   maxHealth: 50
   currentHealth: 0
-  baseMoveSpeed: 0
+  baseMoveSpeed: 5
   moveSpeed: 0
-  attackDamage: 0
-  attackSpeed: 0
+  attackDamage: 10
+  attackSpeed: 2
   experiencePoints: 0
-  dropCoins: 0
+  dropCoins: 50
   dropGems: 0
   healthBar: {fileID: 6554840995310610955}
   hitAudio: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}

@@ -60,7 +60,7 @@ public class GameProgressManager : Singleton<GameProgressManager>
     void Start()
     {
         StartStage(1);
-        InitPlayerStats(1000); // 임시 체력 초기화
+        InitPlayerStats(playerMaxHealth); // 임시 체력 초기화
     }
 
     void Update()

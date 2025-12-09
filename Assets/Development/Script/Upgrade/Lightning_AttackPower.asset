@@ -18,5 +18,5 @@ MonoBehaviour:
   Description: (Lightning) Attack Power Upgrade
   Icon: {fileID: 0}
   MaxLevel: 10
-  IncreaseRatio: 0.4
+  IncreaseRatio: 0.1
   CostPerLevel: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
