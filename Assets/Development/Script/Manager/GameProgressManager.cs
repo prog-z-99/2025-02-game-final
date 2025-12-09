@@ -224,6 +224,7 @@ public class GameProgressManager : Singleton<GameProgressManager>
             case GameProgressState.Idle:
                 Time.timeScale = 1f;
                 MetaManager.Instance.AddResources(playerCoins, playerGems); // 메타 매니저에 자원 추가
+                ClearAllMonsters();
                 break;
             case GameProgressState.Playing:
                 Time.timeScale = 1f;
@@ -343,5 +344,11 @@ public class GameProgressManager : Singleton<GameProgressManager>
     protected void HideGameClearUI()
     {
         UIManager.Instance.HideGameClearUI();
+    }
+
+    // ========= 기타 메서드 ==========
+    private void ClearAllMonsters()
+    {
+        SpawnManager.Instance.ClearAllMonsters();
     }
 }

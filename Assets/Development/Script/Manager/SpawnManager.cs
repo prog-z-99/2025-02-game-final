@@ -141,4 +141,20 @@ public class SpawnManager : Singleton<SpawnManager>
             GameProgressManager.Instance.CompleteRound();
         }
     }
+
+    public void ClearAllMonsters()
+    {
+        MonsterController[] monsters = new MonsterController[MonsterController.Entities.Count];
+        MonsterController.Entities.CopyTo(monsters);
+        
+        foreach (MonsterController monster in monsters)
+        {
+            if (monster != null)
+            {
+                Destroy(monster.gameObject);
+            }
+        }
+        
+        MonsterController.Entities.Clear();
+    }
 }
