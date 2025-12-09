@@ -6,6 +6,9 @@ public class UIManager : Singleton<UIManager>
 {
     // =========== UI References ==========
     [Header("Main UI Panels")]
+    [SerializeField] private GameObject StartMenuUI;
+    [SerializeField] private GameObject MainMenuUI;
+    [SerializeField] private GameObject InGameUI;
     [SerializeField] private GameObject PauseUI;
     [SerializeField] private GameObject GameOverUI;
     [SerializeField] private GameObject GameClearUI;
@@ -46,6 +49,42 @@ public class UIManager : Singleton<UIManager>
     }
 
     // ========== UI Show/Hide Methods ==========
+
+    public void StartToMainMenuTransition()
+    {
+        HideStartMenuUI();
+        ShowMainMenuUI();
+    }
+    public void ShowStartMenuUI()
+    {
+        StartMenuUI.SetActive(true);
+    }
+
+    public void HideStartMenuUI()
+    {
+        StartMenuUI.SetActive(false);
+    }
+
+    public void ShowMainMenuUI()
+    {
+        MainMenuUI.SetActive(true);
+    }
+
+    public void HideMainMenuUI()
+    {
+        MainMenuUI.SetActive(false);
+    }
+
+    public void ShowInGameUI()
+    {
+        InGameUI.SetActive(true);
+    }
+
+    public void HideInGameUI()
+    {
+        InGameUI.SetActive(false);
+    }
+
     public void ShowPauseUI()
     {
         PauseUI.SetActive(true);
@@ -94,7 +133,7 @@ public class UIManager : Singleton<UIManager>
             slot.Refresh();
         }
     }
-    
+
     public void OnStartGameButtonClicked()
     {
         GameProgressManager.Instance.ChangeState(GameProgressState.Playing);
