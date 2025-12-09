@@ -14,6 +14,8 @@ public class UIManager : Singleton<UIManager>
     [Header("Main UI Elements")]
     [SerializeField] private Text MainGoldText;
     [SerializeField] private Text MainGemText;
+    [SerializeField] private InputField DebugGoldInputField;
+    [SerializeField] private InputField DebugGemInputField;
 
     // =========== In-Game UI Elements ==========
     [Header("In-Game UI Elements")]
@@ -40,7 +42,7 @@ public class UIManager : Singleton<UIManager>
             else if (GameProgressManager.Instance.CurrentState == GameProgressState.Paused)
                 GameProgressManager.Instance.ResumeGame();
         }
-        
+
     }
 
     // ========== UI Show/Hide Methods ==========
@@ -78,8 +80,8 @@ public class UIManager : Singleton<UIManager>
     public void UpdateMainMenuResources()
     {
         MainGoldText.text = $"Gold: {MetaManager.Instance.CurrentGold}";
-        // MainGemText.text = $"Gem: {MetaManager.Instance.CurrentGem}";
-        
+        MainGemText.text = $"Gem: {MetaManager.Instance.CurrentGem}";
+
         // 재화 변경 시 모든 업그레이드 슬롯 새로고침
         RefreshAllUpgradeSlots();
     }
@@ -91,6 +93,24 @@ public class UIManager : Singleton<UIManager>
         {
             slot.Refresh();
         }
+    }
+
+    public void OnDebugAddGoldButtonClicked()
+    {
+        if (int.TryParse(DebugGoldInputField.text, out int amount))
+        {
+            MetaManager.Instance.AddResources(amount, 0);
+        }
+        DebugGoldInputField.text = null;
+    }
+
+    public void OnDebugAddGemButtonClicked()
+    {
+        if (int.TryParse(DebugGemInputField.text, out int amount))
+        {
+            MetaManager.Instance.AddResources(0, amount);
+        }
+        DebugGemInputField.text = null;
     }
 
     // ========= In-Game UI Update Methods ==========
