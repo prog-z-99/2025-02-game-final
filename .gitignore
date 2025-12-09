@@ -2,6 +2,9 @@
 !Assets
 Assets/*
 !Assets/Development
+Build
+Build Linux_Data
+Build Linux86_64
 
 Packages/packages-lock.json
 
@@ -11,3 +14,7 @@ UserSettings
 Temp
 *.csproj
 
+Build Linux.x86_64
+libdecor-0.so.0
+libdecor-cairo.so
+UnityPlayer.so

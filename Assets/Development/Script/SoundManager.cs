@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour
         }
 
         source = GetComponent<AudioSource>();
+        source.Play();
+        source.loop = true;
     }
 
 
@@ -45,8 +47,9 @@ public class SoundManager : MonoBehaviour
     {
         source.PlayOneShot(clip);
     }
-    public void LoopMusic(AudioValue value)
+    public void LoopMusic()
     {
         source.Play();
+        source.loop = true;
     }
 }

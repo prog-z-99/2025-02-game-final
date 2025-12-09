@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 7048984066602449132, guid: 5844b9969e647804e82cf1b62269d0c1, type: 3}
   - {fileID: 734889237951171335, guid: e5ae2d485f5784b4fa0d11bc1117b941, type: 3}
   boss: {fileID: 1067925524328404, guid: 243c072bd10893a449ad86a25fd1b776, type: 3}
-  totalEnemies: 1e0000003200000064000000
+  totalEnemies: 010000000100000064000000
   spawnRatios:
   - 3
   - 4
