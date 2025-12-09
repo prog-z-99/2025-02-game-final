@@ -579,9 +579,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 447453888}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeToPlaying
+      - m_Target: {fileID: 35103675}
+        m_TargetAssemblyTypeName: GameProgressManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1104,14 +1104,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b14eca457b5f94bb973bfeed1cd9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartMenuUI: {fileID: 1091860346}
+  MainMenuUI: {fileID: 1426209708}
+  InGameUI: {fileID: 1196698963}
   PauseUI: {fileID: 1454536532}
   GameOverUI: {fileID: 303546364}
   GameClearUI: {fileID: 55718623}
+  MainGoldText: {fileID: 0}
+  MainGemText: {fileID: 0}
+  DebugGoldInputField: {fileID: 0}
+  DebugGemInputField: {fileID: 0}
   InGamePlayerHPSlider: {fileID: 1973923814}
   InGameKillCountText: {fileID: 1434546106}
   InGamePlayTimeText: {fileID: 660985236}
   InGameStageRoundText: {fileID: 1435549536}
   InGameRoundLeftKillCountText: {fileID: 856516911}
+  InGameGoldText: {fileID: 0}
+  InGameGemText: {fileID: 0}
 --- !u!1001 &261529518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1404,9 +1413,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 447453888}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeToMainMenu
+      - m_Target: {fileID: 257765948}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: StartToMainMenuTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5860,7 +5869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1426209709
 RectTransform:
   m_ObjectHideFlags: 0

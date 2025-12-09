@@ -59,7 +59,7 @@ public class GameProgressManager : Singleton<GameProgressManager>
 
     void Start()
     {
-        StartStage(1);
+        // StartStage(1);
     }
 
     void Update()
@@ -204,10 +204,14 @@ public class GameProgressManager : Singleton<GameProgressManager>
 
     private void HandleStateTransition(GameProgressState oldState, GameProgressState newState)
     {
+        if (oldState == newState) return;
         // 이전 상태 종료 처리
         switch (oldState)
         {
             case GameProgressState.Idle:
+                UIManager.Instance.HideMainMenuUI();
+                UIManager.Instance.ShowInGameUI();
+                StartStage(1);
                 break;
             case GameProgressState.Playing:
                 break;
