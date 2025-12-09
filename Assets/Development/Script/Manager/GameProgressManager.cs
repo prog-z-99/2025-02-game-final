@@ -60,7 +60,6 @@ public class GameProgressManager : Singleton<GameProgressManager>
     void Start()
     {
         StartStage(1);
-        InitPlayerStats(1000); // 임시 체력 초기화
     }
 
     void Update()
@@ -90,6 +89,12 @@ public class GameProgressManager : Singleton<GameProgressManager>
         playerTotalKillCount = totalKillCount;
         this.playTime = playTime;
         UIManager.Instance.UpdateInGameResources();
+    }
+
+    public void ResetPlayerStats()
+    {
+        SetPlayerStats(playerMaxHealth, 0, 0, 0, 0, 0, 0f);
+        UIManager.Instance.UpdateInGameUI();
     }
 
     public void AddHealth(int amount)
@@ -228,6 +233,7 @@ public class GameProgressManager : Singleton<GameProgressManager>
                 break;
             case GameProgressState.Playing:
                 Time.timeScale = 1f;
+                ResetPlayerStats();
                 // BackgroundManager.Instance.StartSpawningBackgrounds();
                 break;
             case GameProgressState.Paused:

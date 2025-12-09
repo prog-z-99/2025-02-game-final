@@ -94,6 +94,11 @@ public class UIManager : Singleton<UIManager>
             slot.Refresh();
         }
     }
+    
+    public void OnStartGameButtonClicked()
+    {
+        GameProgressManager.Instance.ChangeState(GameProgressState.Playing);
+    }
 
     public void OnDebugAddGoldButtonClicked()
     {
@@ -172,5 +177,15 @@ public class UIManager : Singleton<UIManager>
     {
         InGameGoldText.text = $"Golds: {GameProgressManager.Instance.PlayerCoins}";
         InGameGemText.text = $"Gems: {GameProgressManager.Instance.PlayerGems}";
+    }
+
+    public void UpdateInGameUI()
+    {
+        UpdatePlayerHP();
+        UpdateKillCount();
+        UpdatePlayTime();
+        UpdateStageRound();
+        UpdateRoundLeftKillCount();
+        UpdateInGameResources();
     }
 }
